@@ -23,6 +23,9 @@ Driver.o: Driver.cpp
 Race.o: Race.cpp
 	$(CFLAGS) -c Race.cpp
 
+Vehicle_Upgrade.o: Vehicle_Upgrade.cpp
+	$(CFLAGS) -c Vehicle_Upgrade.cpp
+
 Functions.o: Functions.cpp
 	$(CFLAGS) -c Functions.cpp
 

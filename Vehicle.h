@@ -6,6 +6,8 @@ using namespace std;
 
 class Vehicle
 {
+    protected:
+
     int engine_power;
     int acceleration;
 
