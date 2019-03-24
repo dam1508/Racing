@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1553363957 source:/home/dam1508/Pulpit/Studia/Racing/main.cpp
+	<iostream>
+	"Driver.h"
+	"Race.h"
+
+1552997421 /home/dam1508/Pulpit/Studia/Racing/Vehicle.h
+	<iostream>
+
+1552999621 source:/home/dam1508/Pulpit/Studia/Racing/Vehicle.cpp
+	<iostream>
+	"Vehicle.h"
+
+1553359495 source:/home/dam1508/Pulpit/Studia/Racing/Driver.cpp
+	<iostream>
+	"Driver.h"
+
+1553359360 /home/dam1508/Pulpit/Studia/Racing/Driver.h
+	<iostream>
+	"Vehicle.h"
+
+1553363987 /home/dam1508/Pulpit/Studia/Racing/Race.h
+	<iostream>
+	"Driver.h"
+
+1553363856 source:/home/dam1508/Pulpit/Studia/Racing/Race.cpp
+	<iostream>
+	"Race.h"
+
