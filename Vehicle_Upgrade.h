@@ -1,12 +1,15 @@
 #ifndef VEHICLE_UPGRADE_H
 #define VEHICLE_UPGRADE_H
 #include "Driver.h"
+#include "Functions.h"
 
-class Vehicle_Upgrade :public Driver
-{
+class Driver;
+
+//class Vehicle_Upgrade //:public Driver
+//{
     //public:
 
-    //void workshop();
-};
+    void workshop(Driver &player);
+//};
 
 #endif

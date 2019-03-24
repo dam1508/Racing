@@ -1,7 +1,5 @@
 #include "Vehicle.h"
 
-using namespace std;
-
 void Vehicle::display_statistics()
 {
     cout<<"Moc silnika: "<<engine_power<<endl<<"Przyspieszenie: "<<acceleration;

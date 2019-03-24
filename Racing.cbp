@@ -36,9 +36,14 @@
 		</Compiler>
 		<Unit filename="Driver.cpp" />
 		<Unit filename="Driver.h" />
+		<Unit filename="Functions.cpp" />
+		<Unit filename="Functions.h" />
+		<Unit filename="Race.cpp" />
 		<Unit filename="Race.h" />
 		<Unit filename="Vehicle.cpp" />
 		<Unit filename="Vehicle.h" />
+		<Unit filename="Vehicle_Upgrade.cpp" />
+		<Unit filename="Vehicle_Upgrade.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
