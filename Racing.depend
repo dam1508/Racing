@@ -1,29 +1,35 @@
 # depslib dependency file v1.0
-1553363957 source:/home/dam1508/Pulpit/Studia/Racing/main.cpp
-	<iostream>
+1553429736 source:/home/dam1508/Pulpit/Studia/Racing/main.cpp
+	<ctime>
 	"Driver.h"
 	"Race.h"
 
-1552997421 /home/dam1508/Pulpit/Studia/Racing/Vehicle.h
+1553429335 /home/dam1508/Pulpit/Studia/Racing/Vehicle.h
 	<iostream>
 
-1552999621 source:/home/dam1508/Pulpit/Studia/Racing/Vehicle.cpp
-	<iostream>
+1553429154 source:/home/dam1508/Pulpit/Studia/Racing/Vehicle.cpp
 	"Vehicle.h"
 
-1553359495 source:/home/dam1508/Pulpit/Studia/Racing/Driver.cpp
-	<iostream>
+1553429778 source:/home/dam1508/Pulpit/Studia/Racing/Driver.cpp
 	"Driver.h"
 
-1553359360 /home/dam1508/Pulpit/Studia/Racing/Driver.h
-	<iostream>
+1553429154 /home/dam1508/Pulpit/Studia/Racing/Driver.h
 	"Vehicle.h"
 
-1553363987 /home/dam1508/Pulpit/Studia/Racing/Race.h
-	<iostream>
+1553430105 /home/dam1508/Pulpit/Studia/Racing/Race.h
 	"Driver.h"
+	<cstdlib>
+	<ctime>
 
-1553363856 source:/home/dam1508/Pulpit/Studia/Racing/Race.cpp
-	<iostream>
+1553429736 source:/home/dam1508/Pulpit/Studia/Racing/Race.cpp
 	"Race.h"
+	"Functions.h"
+
+1553429647 source:/home/dam1508/Pulpit/Studia/Racing/Functions.cpp
+	"Functions.h"
+
+1553429199 /home/dam1508/Pulpit/Studia/Racing/Functions.h
+	<iostream>
+	<cstdlib>
+	<ctime>
 

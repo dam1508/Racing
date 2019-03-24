@@ -1,7 +1,8 @@
 #ifndef RACE_H
 #define RACE_H
-#include <iostream>
 #include "Driver.h"
+#include <cstdlib>
+#include <ctime>
 
 using namespace std;
 
@@ -19,7 +20,7 @@ class Race :public Driver
     void generate_drivers();
     void display_drivers();
 
-    Race(int nod=2, int l=1000, int tp250=1);
+    Race(int nod=4, int l=1000, int tp250=1);
     ~Race();
 };
 

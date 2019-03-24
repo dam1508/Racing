@@ -1,12 +1,12 @@
-#include <iostream>
 #include "Race.h"
+#include "Functions.h"
 
 using namespace std;
 
 Driver Race::generate_driver()
 
-{
-    Driver d(1,2,3,4);
+{//srand(time(NULL));
+    Driver d(random_number(1,10),random_number(1,10),random_number(1,10),random_number(1,10));
 
     return d;
 }

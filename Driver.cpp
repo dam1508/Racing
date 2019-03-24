@@ -1,11 +1,10 @@
-#include <iostream>
 #include "Driver.h"
 
 using namespace std;
 
 void Driver::display_stats()
 {
-    cout<<"Percepcja: "<<perception<<endl<<"Prowadzenie: "<<handling<<endl;
+    cout<<"Prowadzenie: "<<handling<<endl<<"Percepcja: "<<perception<<endl;
     cout<<"Statystyki samochodu:"<<endl;
     Vehicle::display_statistics();
 }
