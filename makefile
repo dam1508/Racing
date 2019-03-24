@@ -2,14 +2,14 @@ CFLAGS = g++
 
 debug: CFLAGS+= -g
 
-compile: run
-	./run
+compile: go
+	./go
 
-debug: run
-	gdb run
+debug: go
+	gdb go
 
-run: main.o Vehicle.o
-	$(CFLAGS) main.o Vehicle.o -o run
+go: main.o Vehicle.o Driver.o Race.o Functions.o
+	$(CFLAGS) main.o Vehicle.o Driver.o Race.o Functions.o -o go
 
 main.o: main.cpp
 	$(CFLAGS) -c main.cpp
@@ -17,5 +17,14 @@ main.o: main.cpp
 Vehicle.o: Vehicle.cpp
 	$(CFLAGS) -c Vehicle.cpp
 
+Driver.o: Driver.cpp
+	$(CFLAGS) -c Driver.cpp
+
+Race.o: Race.cpp
+	$(CFLAGS) -c Race.cpp
+
+Functions.o: Functions.cpp
+	$(CFLAGS) -c Functions.cpp
+
 clean:
-	rm *.o run
+	rm *.o go
