@@ -16,6 +16,7 @@ class Driver :public Vehicle
     string name;
     int experience;
     int mastery_lvl;
+    int skill_points;
     int handling;
     int perception;
     int money;
@@ -24,16 +25,19 @@ class Driver :public Vehicle
     public:
 
     void level_up(int exp);
+    void spend_skill_points();
     void display_stats();
     void display_player();
     void display_score();
 
-    Driver(int h=1 ,int p=1, int v_ep=1, int v_a=1,int e=0,int lvl=1, int mn=0, double rs=0, string n="Mark");
+    Driver(int h=1 ,int p=1, int v_ep=1, int v_a=1,int e=0,int lvl=1,int sp=0, int mn=0, double rs=0, string n="Mark");
     ~Driver();
 
     friend void workshop(Driver &player);
     //friend void Race::set_driver_score(Driver driver);
 
 };
+
+//class Driver
 
 #endif

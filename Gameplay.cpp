@@ -10,16 +10,17 @@ void game()
     string player_name;
     cout<<"Tworzenie nowego gracza"<<endl;
     cout<<"Podaj nazwe: ";  cin>>player_name;
-    Driver Player(1, 1, 1, 1, 0, 1, 0, 0, player_name);
+    Driver Player(1, 1, 1, 1, 0, 1, 0, 0, 0, player_name);
 
     while(menu==true)
     {
         system("clear");
         Player.display_player();
         cout<<"1. Wyscigi"<<endl;
-        cout<<"2. Warsztat"<<endl;
-        cout<<"3. Wyjdz"<<endl;
-        limited_int_cin(choice, 1, 3);
+        cout<<"2. Ulepsz umiejetnosci"<<endl;
+        cout<<"3. Warsztat"<<endl;
+        cout<<"4. Wyjdz"<<endl;
+        limited_int_cin(choice, 1, 4);
 
         switch(choice)
         {
@@ -29,7 +30,7 @@ void game()
                 race.generate_drivers(Player);
                 system("clear");
                 cout<<"Przeciwnicy: "<<endl;
-                race.display_drivers();
+                race.display_race();
                 cin>>go;
 
                 winner=race.race(Player);
@@ -44,10 +45,14 @@ void game()
             }
 
             case 2:
-                workshop(Player);
+                Player.spend_skill_points();
             break;
 
             case 3:
+                workshop(Player);
+            break;
+
+            case 4:
                 menu=false;
             break;
         }

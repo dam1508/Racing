@@ -17,12 +17,13 @@ class Race
     int participation_prize;
     Driver *drivers;
 
-    Driver generate_driver();
+    Driver generate_driver(int min_lvl, int max_lvl);
 
     public:
 
     void generate_drivers(Driver player);
     void display_drivers();
+    void display_race();
     void set_driver_score(Driver &driver);
     int race(Driver player);
     void display_scores(Driver player);

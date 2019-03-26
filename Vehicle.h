@@ -18,4 +18,4 @@ class Vehicle
         ~Vehicle();
 };
 
-#endif // VEHICLE_H
+#endif
