@@ -1,12 +1,12 @@
 #ifndef RACE_H
 #define RACE_H
 #include "Driver.h"
-#include <iostream>
 #include <cstdlib>
-#include <ctime>
 
 class Driver;
 class Driver_List;
+
+//------------------KLASA WYSCIGU-------------------
 
 class Race
 {
@@ -18,7 +18,7 @@ class Race
     int difficulty;
     int winning_prize;
     int participation_prize;
-    Driver_List *drivers;
+    Driver_List *drivers;       //Lista zawodnikow na dany wyscig
 
     void display_drivers();
     Driver generate_driver(int min_lvl, int max_lvl);

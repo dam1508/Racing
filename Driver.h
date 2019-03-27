@@ -2,13 +2,14 @@
 #define DRIVER_H
 #include "Vehicle.h"
 #include "Race.h"
-#include "Vehicle_Upgrade.h"
 #include "Gameplay.h"
 #include <string>
 
 class Race;
 class Vehicle_Upgrade;
 class Game;
+
+//-------------------------KLASA KIEROWCY---------------------------
 
 class Driver :public Vehicle
 {
@@ -25,7 +26,7 @@ class Driver :public Vehicle
     double race_score;
 
     void level_up(int exp);
-    void spend_skill_points();
+    void spend_skill_points();              //funkcja pozwalajaca ulepszac statystyki kierowcy za punkty umiejetnosci
     void display_stats();
     void display_player();
     void display_score();
@@ -40,6 +41,8 @@ class Driver :public Vehicle
     friend void workshop(Driver &player);
     friend void game();
 };
+
+//-------------------------RZECZY POTRZEBNE DO LISTY---------------------------
 
 struct Driver_Node
 {
