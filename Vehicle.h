@@ -4,6 +4,8 @@
 
 using namespace std;
 
+//-----------------PRZYKLADOWY MODEL FORMULY-------------------------
+
 class Vehicle
 {
     protected:

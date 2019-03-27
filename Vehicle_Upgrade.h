@@ -5,11 +5,8 @@
 
 class Driver;
 
-//class Vehicle_Upgrade //:public Driver
-//{
-    //public:
+//------------Funkcja pozwalajaca ulepszyc pojazd za pieniadze----------------
 
-    void workshop(Driver &player);
-//};
+void workshop(Driver &player);
 
 #endif

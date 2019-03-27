@@ -13,7 +13,7 @@ void Race::generate_drivers(Driver player)
 
     for(int i=1;i<number_of_drivers;++i)
     {
-        drivers->add_driver(generate_driver(1,10));
+        drivers->add_driver(generate_driver(1,10));                     //Zmieniajac liczby w nawiasie mozna zmienic poziom trudnosci
         drivers->beggining->place = 0;
     }
 

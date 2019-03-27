@@ -25,7 +25,7 @@ void game()
         switch(choice)
         {
             case 1:
-            {//Driver_List d;
+            {   //tu mozna ustawic losowosc wyscigow
                 Race race(random_number(5, 20), random_double(750, 3500, 0), random_double(1, 4, 2), random_number(40, 200), random_number(5,20)*1000, random_number(4,15)*100);
                 race.generate_drivers(Player);
                 system("clear");
@@ -34,7 +34,7 @@ void game()
 
                 race.race();
                 system("clear");
-                if(winner==0)   cout<<"!!!WYGRANA!!!"<<endl<<endl;
+                if(race.drivers->beggining->place == 1)   cout<<"!!!WYGRANA!!!"<<endl<<endl;
                 else            cout<<"PRZEGRANA"<<endl<<endl;
                 race.display_scores();
                 cin>>go;
@@ -55,7 +55,5 @@ void game()
                 menu=false;
             break;
         }
-
-
     }
 }
