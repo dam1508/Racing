@@ -25,22 +25,21 @@ void game()
         switch(choice)
         {
             case 1:
-            {
+            {//Driver_List d;
                 Race race(random_number(5, 20), random_double(750, 3500, 0), random_double(1, 4, 2), random_number(40, 200), random_number(5,20)*1000, random_number(4,15)*100);
                 race.generate_drivers(Player);
                 system("clear");
-                cout<<"Przeciwnicy: "<<endl;
                 race.display_race();
                 cin>>go;
 
-                winner=race.race(Player);
+                race.race();
                 system("clear");
                 if(winner==0)   cout<<"!!!WYGRANA!!!"<<endl<<endl;
                 else            cout<<"PRZEGRANA"<<endl<<endl;
-                race.display_scores(Player);
+                race.display_scores();
                 cin>>go;
 
-                Player=race.rewards(winner);
+                race.rewards(Player);
                 break;
             }
 

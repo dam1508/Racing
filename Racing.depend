@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1553530160 source:/home/dam1508/Pulpit/Studia/Racing/main.cpp
+1553637666 source:/home/dam1508/Pulpit/Studia/Racing/main.cpp
 	<ctime>
 	<iostream>
 	"Driver.h"
@@ -8,28 +8,29 @@
 	"Vehicle_Upgrade.h"
 	"Gameplay.h"
 
-1553530160 /home/dam1508/Pulpit/Studia/Racing/Vehicle.h
+1553722143 /home/dam1508/Pulpit/Studia/Racing/Vehicle.h
 	<iostream>
 
 1553457975 source:/home/dam1508/Pulpit/Studia/Racing/Vehicle.cpp
 	"Vehicle.h"
 
-1553530561 source:/home/dam1508/Pulpit/Studia/Racing/Driver.cpp
+1553722063 source:/home/dam1508/Pulpit/Studia/Racing/Driver.cpp
 	"Driver.h"
 
-1553629239 /home/dam1508/Pulpit/Studia/Racing/Driver.h
+1553722802 /home/dam1508/Pulpit/Studia/Racing/Driver.h
 	"Vehicle.h"
 	"Race.h"
 	"Vehicle_Upgrade.h"
+	"Gameplay.h"
 	<string>
 
-1553531479 /home/dam1508/Pulpit/Studia/Racing/Race.h
+1553722886 /home/dam1508/Pulpit/Studia/Racing/Race.h
 	"Driver.h"
 	<iostream>
 	<cstdlib>
 	<ctime>
 
-1553531513 source:/home/dam1508/Pulpit/Studia/Racing/Race.cpp
+1553722802 source:/home/dam1508/Pulpit/Studia/Racing/Race.cpp
 	"Race.h"
 	"Functions.h"
 
@@ -49,7 +50,7 @@
 	"Driver.h"
 	"Functions.h"
 
-1553528258 source:/home/dam1508/Pulpit/Studia/Racing/Gameplay.cpp
+1553717452 source:/home/dam1508/Pulpit/Studia/Racing/Gameplay.cpp
 	"Gameplay.h"
 
 1553466687 /home/dam1508/Pulpit/Studia/Racing/Gameplay.h

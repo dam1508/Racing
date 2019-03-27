@@ -11,11 +11,12 @@ class Vehicle
     int engine_power;
     int acceleration;
 
-    public:
-        void display_statistics();
+    void display_statistics();
 
-        Vehicle(int ep=1, int acc=1);
-        ~Vehicle();
+    public:
+
+    Vehicle(int ep=1, int acc=1);
+    ~Vehicle();
 };
 
 #endif

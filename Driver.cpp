@@ -70,7 +70,7 @@ void Driver::display_stats()
 void Driver::display_player()
 {
     cout<<"-------------------------------------"<<endl;
-    cout<<name<<"\tLvl: "<<mastery_lvl<<"\tPunkty umiejetnosci: "<<skill_points<<"\t$$$: "<<money<<endl<<race_score<<endl;
+    cout<<name<<"\tLvl: "<<mastery_lvl<<"\tPunkty umiejetnosci: "<<skill_points<<"\t$$$: "<<money<<endl<<endl;
     cout<<"Prowadzenie: "<<handling<<endl<<"Percepcja: "<<perception<<endl<<endl;
     cout<<"Statystyki samochodu:"<<endl<<endl;
     Vehicle::display_statistics();  cout<<endl;
@@ -80,6 +80,20 @@ void Driver::display_player()
 void Driver::display_score()
 {
     cout<<race_score;
+}
+
+const Driver& Driver::operator=(const Driver& driver)
+{
+    name=driver.name;
+    experience=driver.experience;
+    mastery_lvl=driver.mastery_lvl;
+    skill_points=driver.skill_points;
+    handling=driver.handling;
+    perception=driver.perception;
+    engine_power=driver.engine_power;
+    acceleration=driver.acceleration;
+    money=driver.money;
+    race_score=driver.race_score;
 }
 
 Driver::Driver(int h, int p, int v_ep, int v_a, int e, int lvl, int sp, int m, double rs, string n)
@@ -98,4 +112,33 @@ Driver::Driver(int h, int p, int v_ep, int v_a, int e, int lvl, int sp, int m, d
 Driver::~Driver()
 {
 
+}
+
+//--------------------------------------------------------------
+
+void Driver_List::add_driver(Driver add_this_driver)
+{
+    Driver_Node *node;
+    node=new Driver_Node;
+    node->driver=add_this_driver;
+    node->next=beggining;
+    node->previous=NULL;
+    beggining=node;
+}
+
+Driver_List::Driver_List()
+{
+    beggining=NULL;
+}
+
+Driver_List::~Driver_List()
+{
+    Driver_Node *help;
+    help = beggining;
+    while(help)
+    {
+        beggining = beggining->next;
+        delete help;
+        help = beggining;
+    }
 }

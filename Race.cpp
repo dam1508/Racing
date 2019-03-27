@@ -9,23 +9,31 @@ Driver Race::generate_driver(int min_lvl, int max_lvl)
 
 void Race::generate_drivers(Driver player)
 {
-    drivers = new Driver[number_of_drivers];
-
-    drivers[0]=player;
+    drivers = new Driver_List;
 
     for(int i=1;i<number_of_drivers;++i)
     {
-        drivers[i]=generate_driver(2, 6);
+        drivers->add_driver(generate_driver(1,10));
+        drivers->beggining->place = 0;
     }
+
+    drivers->add_driver(player);
 }
 
 void Race::display_drivers()
 {
-    for(int i=0;i<number_of_drivers;++i)
+    Driver_Node *help;
+    help = drivers->beggining;
+    help = help->next;
+
+    cout<<"Przeciwnicy: "<<endl;
+
+    for(int i=1;i<number_of_drivers;++i)
     {
         cout<<i<<". ";
-        drivers[i].display_stats();
+        help->driver.display_stats();
         cout<<endl<<endl;
+        help=help->next;
     }
 }
 
@@ -52,47 +60,95 @@ void Race::set_driver_score(Driver &driver)
     driver.race_score = speed_score*perception_skill_adjustment + maneuver_score*handling_skill_adjustment;
 }
 
-int Race::race(Driver player)
+void Race::race()
 {
+    Driver_Node *help;
+    help=drivers->beggining;
+
     for(int i=0;i<number_of_drivers;++i)
     {
-        set_driver_score(drivers[i]);
+        set_driver_score(help->driver);
+        help = help->next;
     }
 
-    int winner=0;
+    double max_score;              max_score = 0;
+    double previous_max_score;     previous_max_score = 0;
+    int max_id;
+    bool done;  done = false;
 
-    for(int i=1;i<number_of_drivers;++i)
+    for(int i=0;i<number_of_drivers;++i)
     {
-        if(drivers[winner].race_score<drivers[i].race_score)
-            winner=i;
-    }
+        help = drivers->beggining;
 
-    return winner;
+        for(int j=0;j<number_of_drivers;++j)
+        {
+            if(done == false)
+            {
+                if(max_score < help->driver.race_score)
+                {
+                    max_score = help->driver.race_score;
+                    max_id = j;
+                }
+            }else{
+
+                if(previous_max_score > help->driver.race_score && max_score < help->driver.race_score)
+                {
+                    max_score = help->driver.race_score;
+                    max_id = j;
+                }
+            }
+            help = help->next;
+        }
+        help = drivers->beggining;
+        for(int k=0;k<max_id;++k)
+        {
+            help = help->next;
+        }help->place=i+1;
+
+        previous_max_score = max_score;
+        max_score = 0;
+        done = true;
+    }
 }
 
-void Race::display_scores(Driver player)
+void Race::display_scores()
 {
+    Driver_Node *help;
+    help = drivers->beggining;
+
     cout<<"Twoj wynik: ";
-    /*player.display_score();*/drivers[0].display_score(); cout<<endl<<endl;
+    help->driver.display_score(); cout<<" Miejsce: "<<help->place<<endl<<endl;
+    help = help->next;
+
     cout<<"Wyniki przeciwnikow:"<<endl<<endl;
 
     for(int i=1;i<number_of_drivers;++i)
     {
         cout<<i<<". ";
-        drivers[i].display_score();
-        cout<<endl;
+        help->driver.display_score();
+        cout<<" Miejsce: "<<help->place<<endl;
+        help = help->next;
     }
 }
 
-Driver Race::rewards(int win)
+void Race::rewards(Driver &player)
 {
-    if(win==0)  drivers[0].money+=winning_prize;
-    else        drivers[0].money+=participation_prize;
+    if(drivers->beggining->place==1)
+        drivers->beggining->driver.money += winning_prize;
 
-    if(win==0)  drivers[0].level_up((length*(double)difficulty/100)*2.5);
-    else        drivers[0].level_up(length*(double)difficulty/100);
+    if(drivers->beggining->place==2)
+        drivers->beggining->driver.money += winning_prize/2;
 
-    return drivers[0];
+    if(drivers->beggining->place==3)
+        drivers->beggining->driver.money += winning_prize/4;
+
+    drivers->beggining->driver.money += participation_prize;
+
+    int exp; exp = length*(double)difficulty/100;
+
+    drivers->beggining->driver.level_up(exp);
+
+    player=drivers->beggining->driver;
 }
 
 Race::Race(int nod, int l, double tp500, int d, int wp, int pp)
@@ -107,5 +163,5 @@ Race::Race(int nod, int l, double tp500, int d, int wp, int pp)
 
 Race::~Race()
 {
-    delete[] drivers;
+    delete drivers;
 }
