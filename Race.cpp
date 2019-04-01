@@ -13,7 +13,7 @@ void Race::generate_drivers(Driver player)
     for(int i=1;i<number_of_drivers;++i)
     {
         add_driver(generate_driver(1,10));                     //Zmieniajac liczby w nawiasie mozna zmienic poziom trudnosci
-        //beggining->set_place(0);
+        beggining->set_place(0);
     }
 
     add_driver(player);
@@ -60,11 +60,15 @@ double Race::driver_score(Driver driver)
 
     score = speed_score*perception_skill_adjustment + maneuver_score*handling_skill_adjustment;
     return score;
-    //driver.set_race_score(score);
 }
 
-void Race::race()
+void Race::race(Driver player)
 {
+    generate_drivers(player);
+    system("clear");
+    display_race();
+    string next; cin>>next;
+
     Driver_Node *help;
     help = beggining;
 

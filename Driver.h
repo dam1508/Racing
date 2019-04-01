@@ -19,11 +19,7 @@ class Driver :public Vehicle
     int money;
     double race_score;
 
-    void spend_skill_points();              //funkcja pozwalajaca ulepszac statystyki kierowcy za punkty umiejetnosci
-
-
-
-    protected:
+    //protected:
 
     int handling;
     int perception;
@@ -38,8 +34,10 @@ class Driver :public Vehicle
 
     void set_score(double new_score) {race_score = new_score;}
 
+    void choose_name();
     void profit(int cash);
     void level_up(int exp);
+    void spend_skill_points();              //funkcja pozwalajaca ulepszac statystyki kierowcy za punkty umiejetnosci
 
     void display_player();
     void display_score();
@@ -51,7 +49,6 @@ class Driver :public Vehicle
     ~Driver();
 
     friend void workshop(Driver &player);
-    friend void game();
 };
 
 #endif

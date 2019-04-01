@@ -17,6 +17,14 @@ void Driver::profit(int cash)
     money += cash;
 }
 
+void Driver::choose_name()
+{
+    string player_name;
+    cout<<"Tworzenie nowego gracza"<<endl;
+    cout<<"Podaj nazwe: ";  cin>>player_name;
+    name = player_name;
+}
+
 void Driver::spend_skill_points()
 {
     bool menu=true;

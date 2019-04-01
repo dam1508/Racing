@@ -8,6 +8,9 @@ debug: CFLAGS+= -g -ggdb
 debug: go
 	gdb go
 
+data: go
+	valgrind ./go
+
 compile: go
 	./go
 
