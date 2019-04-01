@@ -40,6 +40,8 @@
 		<Unit filename="Functions.h" />
 		<Unit filename="Gameplay.cpp" />
 		<Unit filename="Gameplay.h" />
+		<Unit filename="List.cpp" />
+		<Unit filename="List.h" />
 		<Unit filename="Race.cpp" />
 		<Unit filename="Race.h" />
 		<Unit filename="Vehicle.cpp" />

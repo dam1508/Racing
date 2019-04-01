@@ -2,7 +2,7 @@
 
 void Driver::level_up(int exp)
 {
-    experience+=exp;
+    experience += exp;
 
     if(experience>mastery_lvl*2500)
     {
@@ -10,6 +10,11 @@ void Driver::level_up(int exp)
         ++skill_points;
         ++mastery_lvl;
     }
+}
+
+void Driver::profit(int cash)
+{
+    money += cash;
 }
 
 void Driver::spend_skill_points()
@@ -116,29 +121,4 @@ Driver::~Driver()
 
 //--------------------------------------------------------------
 
-void Driver_List::add_driver(Driver add_this_driver)
-{
-    Driver_Node *node;
-    node=new Driver_Node;
-    node->driver=add_this_driver;
-    node->next=beggining;
-    node->previous=NULL;
-    beggining=node;
-}
 
-Driver_List::Driver_List()
-{
-    beggining=NULL;
-}
-
-Driver_List::~Driver_List()
-{
-    Driver_Node *help;
-    help = beggining;
-    while(help)
-    {
-        beggining = beggining->next;
-        delete help;
-        help = beggining;
-    }
-}

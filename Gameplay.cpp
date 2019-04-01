@@ -34,7 +34,7 @@ void game()
 
                 race.race();
                 system("clear");
-                if(race.drivers->beggining->place == 1)   cout<<"!!!WYGRANA!!!"<<endl<<endl;
+                if(race.beggining->get_place() == 1)   cout<<"!!!WYGRANA!!!"<<endl<<endl;
                 else            cout<<"PRZEGRANA"<<endl<<endl;
                 race.display_scores();
                 cin>>go;
