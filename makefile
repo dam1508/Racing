@@ -1,7 +1,7 @@
-CFLAGS = g++ 
+CFLAGS = g++ -Wall
 
-go: main.o Vehicle.o Driver.o Race.o Functions.o Vehicle_Upgrade.o Gameplay.o List.o
-	$(CFLAGS) main.o Vehicle.o Driver.o Race.o Functions.o Vehicle_Upgrade.o Gameplay.o List.o -o go
+go: main.o Vehicle.o Driver.o Race.o Functions.o Vehicle_Upgrade.o Gameplay.o List.o List_Element.o
+	$(CFLAGS) main.o Vehicle.o Driver.o Race.o Functions.o Vehicle_Upgrade.o Gameplay.o List.o List_Element.o -o go
 
 debug: CFLAGS+= -g -ggdb
 
@@ -37,6 +37,9 @@ Gameplay.o: Gameplay.cpp
 
 List.o: List.cpp
 	$(CFLAGS) -c List.cpp
+
+List_Element.o: List_Element.cpp
+	$(CFLAGS) -c List_Element.cpp
 
 clean:
 	rm *.o go

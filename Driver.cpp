@@ -112,6 +112,8 @@ const Driver& Driver::operator=(const Driver& driver)
     acceleration=driver.acceleration;
     money=driver.money;
     race_score=driver.race_score;
+
+    return *this;
 }
 
 Driver::Driver(int h, int p, int v_ep, int v_a, int e, int lvl, int sp, int m, double rs, string n)
