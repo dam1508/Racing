@@ -42,6 +42,8 @@
 		<Unit filename="Gameplay.h" />
 		<Unit filename="List.cpp" />
 		<Unit filename="List.h" />
+		<Unit filename="List_Element.cpp" />
+		<Unit filename="List_Element.h" />
 		<Unit filename="Race.cpp" />
 		<Unit filename="Race.h" />
 		<Unit filename="Vehicle.cpp" />

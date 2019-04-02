@@ -1,27 +1,27 @@
 # depslib dependency file v1.0
-1554225707 source:/home/dam1508/Pulpit/Studia/Racing/main.cpp
+1554228042 source:/home/dam1508/Pulpit/Studia/Racing/main.cpp
 	"Gameplay.h"
 
-1554225707 /home/dam1508/Pulpit/Studia/Racing/Vehicle.h
+1554228042 /home/dam1508/Pulpit/Studia/Racing/Vehicle.h
 	<iostream>
 
 1553727831 source:/home/dam1508/Pulpit/Studia/Racing/Vehicle.cpp
 	"Vehicle.h"
 
-1554227254 source:/home/dam1508/Pulpit/Studia/Racing/Driver.cpp
+1554228042 source:/home/dam1508/Pulpit/Studia/Racing/Driver.cpp
 	"Driver.h"
 
-1554225707 /home/dam1508/Pulpit/Studia/Racing/Driver.h
+1554228042 /home/dam1508/Pulpit/Studia/Racing/Driver.h
 	"Vehicle.h"
 	"Functions.h"
 	<string>
 
-1554156838 /home/dam1508/Pulpit/Studia/Racing/Race.h
+1554228042 /home/dam1508/Pulpit/Studia/Racing/Race.h
 	"List.h"
 	"Functions.h"
 	<cstdlib>
 
-1554226418 source:/home/dam1508/Pulpit/Studia/Racing/Race.cpp
+1554228042 source:/home/dam1508/Pulpit/Studia/Racing/Race.cpp
 	"Race.h"
 
 1553727831 source:/home/dam1508/Pulpit/Studia/Racing/Functions.cpp
@@ -33,29 +33,29 @@
 	<cmath>
 	<limits>
 
-1554225848 source:/home/dam1508/Pulpit/Studia/Racing/Vehicle_Upgrade.cpp
+1554228042 source:/home/dam1508/Pulpit/Studia/Racing/Vehicle_Upgrade.cpp
 	"Vehicle_Upgrade.h"
 
-1554225848 /home/dam1508/Pulpit/Studia/Racing/Vehicle_Upgrade.h
+1554228042 /home/dam1508/Pulpit/Studia/Racing/Vehicle_Upgrade.h
 	"Driver.h"
 	"Functions.h"
 
-1554225848 source:/home/dam1508/Pulpit/Studia/Racing/Gameplay.cpp
+1554228042 source:/home/dam1508/Pulpit/Studia/Racing/Gameplay.cpp
 	"Gameplay.h"
 
-1554205588 /home/dam1508/Pulpit/Studia/Racing/Gameplay.h
+1554228042 /home/dam1508/Pulpit/Studia/Racing/Gameplay.h
 	"Vehicle_Upgrade.h"
 	"Race.h"
 
-1554226932 /home/dam1508/Pulpit/Studia/Racing/List.h
+1554228042 /home/dam1508/Pulpit/Studia/Racing/List.h
 	"List_Element.h"
 
-1554227298 source:/home/dam1508/Pulpit/Studia/Racing/List.cpp
+1554228042 source:/home/dam1508/Pulpit/Studia/Racing/List.cpp
 	"List.h"
 
-1554227772 /home/dam1508/Pulpit/Studia/Racing/List_Element.h
+1554228042 /home/dam1508/Pulpit/Studia/Racing/List_Element.h
 	"Driver.h"
 
-1554227358 source:/home/dam1508/Pulpit/Studia/Racing/List_Element.cpp
+1554228042 source:/home/dam1508/Pulpit/Studia/Racing/List_Element.cpp
 	"List_Element.h"
 
