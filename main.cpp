@@ -3,5 +3,8 @@
 int main()
 {
     srand(time(NULL));
-    game();
+
+    Game game;
+
+    game.gameplay();
 }

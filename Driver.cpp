@@ -2,7 +2,7 @@
 
 void Driver::level_up(int exp)
 {
-    experience+=exp;
+    experience += exp;
 
     if(experience>mastery_lvl*2500)
     {
@@ -10,6 +10,24 @@ void Driver::level_up(int exp)
         ++skill_points;
         ++mastery_lvl;
     }
+}
+
+void Driver::profit(int cash)
+{
+    money += cash;
+}
+
+void Driver::spend(int cash)
+{
+    money -= cash;
+}
+
+void Driver::choose_name()
+{
+    string player_name;
+    cout<<"Tworzenie nowego gracza"<<endl;
+    cout<<"Podaj nazwe: ";  cin>>player_name;
+    name = player_name;
 }
 
 void Driver::spend_skill_points()
@@ -94,6 +112,8 @@ const Driver& Driver::operator=(const Driver& driver)
     acceleration=driver.acceleration;
     money=driver.money;
     race_score=driver.race_score;
+
+    return *this;
 }
 
 Driver::Driver(int h, int p, int v_ep, int v_a, int e, int lvl, int sp, int m, double rs, string n)
@@ -116,29 +136,4 @@ Driver::~Driver()
 
 //--------------------------------------------------------------
 
-void Driver_List::add_driver(Driver add_this_driver)
-{
-    Driver_Node *node;
-    node=new Driver_Node;
-    node->driver=add_this_driver;
-    node->next=beggining;
-    node->previous=NULL;
-    beggining=node;
-}
 
-Driver_List::Driver_List()
-{
-    beggining=NULL;
-}
-
-Driver_List::~Driver_List()
-{
-    Driver_Node *help;
-    help = beggining;
-    while(help)
-    {
-        beggining = beggining->next;
-        delete help;
-        help = beggining;
-    }
-}
