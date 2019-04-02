@@ -18,9 +18,6 @@ class Driver :public Vehicle
     int skill_points;
     int money;
     double race_score;
-
-    //protected:
-
     int handling;
     int perception;
 
@@ -51,8 +48,6 @@ class Driver :public Vehicle
 
     Driver(int h=1 ,int p=1, int v_ep=1, int v_a=1,int e=0,int lvl=1,int sp=0, int mn=0, double rs=0, string n="Mark");
     ~Driver();
-
-    friend void workshop(Driver &player);
 };
 
 #endif

@@ -7,8 +7,6 @@ class Driver;
 
 //------------Funkcja pozwalajaca ulepszyc pojazd za pieniadze----------------
 
-//void workshop(Driver &player);
-
 class Workshop
 {
     Driver player;

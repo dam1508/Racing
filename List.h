@@ -4,13 +4,8 @@
 
 //-------------------------RZECZY POTRZEBNE DO LISTY---------------------------
 
-class Driver;
-class Driver_List;
-
 class Driver_Node
 {
-    protected:
-
     Driver driver;
     Driver_Node *next;
     int place;
@@ -25,7 +20,7 @@ class Driver_Node
     void set_next(Driver_Node *nxt) {next = nxt;}
     void set_place(int plc) {place = plc;}
 
-    Driver_Node();
+    Driver_Node(int p);
     ~Driver_Node();
 };
 

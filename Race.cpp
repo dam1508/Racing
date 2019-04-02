@@ -10,7 +10,7 @@ void Race::generate_drivers(Driver player)
 {
     for(int i=1;i<number_of_drivers;++i)
     {
-        add_driver(generate_driver(1,10));                     //Zmieniajac liczby w nawiasie mozna zmienic poziom trudnosci
+        add_driver(generate_driver(2,10));                     //Zmieniajac liczby w nawiasie mozna zmienic poziom trudnosci
         beggining->set_place(0);
     }
 
@@ -142,7 +142,7 @@ void Race::display_scores()
 
 void Race::rewards(Driver &player)
 {
-    int earnings;
+    int earnings;   earnings = 0;
 
     if(beggining->get_place()==1)
         earnings += winning_prize;
@@ -175,5 +175,5 @@ Race::Race(int nod, int l, double tp500, int d, int wp, int pp)
 
 Race::~Race()
 {
-    //delete drivers;
+
 }

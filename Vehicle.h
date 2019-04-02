@@ -4,7 +4,7 @@
 
 using namespace std;
 
-//-----------------PRZYKLADOWY MODEL FORMULY-------------------------
+//-----------------PRZYKLADOWY MODEL BOLIDU-------------------------
 
 class Vehicle
 {
