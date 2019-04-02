@@ -101,9 +101,14 @@ void Game::gameplay()
             break;
 
             case 3:
-                menu = false;
-            break;
+            {
 
+                Workshop w1(Player);
+                w1.modify_car();
+                Player = w1.get_driver();
+
+            break;
+            }
             case 4:
                 menu = false;
             break;
@@ -111,7 +116,7 @@ void Game::gameplay()
     }
 }
 
-Game::Game( int m,int  c, string g) :Player(1, 1, 1, 1, 0, 1, 0, 0, 0, "mark")
+Game::Game(bool m, int  c, string g) :Player(1, 1, 1, 1, 0, 1, 0, 0, 0, "mark")
 {
     menu = m;
     choice = c;

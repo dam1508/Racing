@@ -17,6 +17,11 @@ void Driver::profit(int cash)
     money += cash;
 }
 
+void Driver::spend(int cash)
+{
+    money -= cash;
+}
+
 void Driver::choose_name()
 {
     string player_name;

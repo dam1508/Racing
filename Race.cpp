@@ -8,8 +8,6 @@ Driver Race::generate_driver(int min_lvl, int max_lvl)
 
 void Race::generate_drivers(Driver player)
 {
-    //drivers = new Driver_List;
-
     for(int i=1;i<number_of_drivers;++i)
     {
         add_driver(generate_driver(1,10));                     //Zmieniajac liczby w nawiasie mozna zmienic poziom trudnosci

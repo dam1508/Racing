@@ -9,7 +9,7 @@ void game();
 
 class Game
 {
-    int menu;
+    bool menu;
     int choice;
     string go;
 
@@ -22,7 +22,7 @@ class Game
 
     void gameplay();
 
-    Game(int m = 1, int c = 1, string g = "a");
+    Game(bool m = true, int c = 1, string g = "a");
     ~Game();
 };
 

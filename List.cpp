@@ -3,7 +3,6 @@
 Driver_Node::Driver_Node()
 {
     next = NULL;
-//    previous = NULL;
 }
 
 Driver_Node::~Driver_Node()

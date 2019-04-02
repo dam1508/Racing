@@ -30,12 +30,16 @@ class Driver :public Vehicle
     int get_perception() const {return perception;}
     int get_engine_power() const {return engine_power;}
     int get_acceleration() const {return acceleration;}
+    int get_money() const {return money;}
     double get_race_score() const {return race_score;}
 
     void set_score(double new_score) {race_score = new_score;}
 
+    void upgrade_engine() {++engine_power;}
+    void upgrade_acceleration() {++acceleration;}
     void choose_name();
     void profit(int cash);
+    void spend(int cash);
     void level_up(int exp);
     void spend_skill_points();              //funkcja pozwalajaca ulepszac statystyki kierowcy za punkty umiejetnosci
 
